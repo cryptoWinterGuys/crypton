@@ -15,10 +15,14 @@ function showTable(){
             coinData += `<td> $ ${coinSet[i].current_price} </td>`;
             coinData += `<td> ${coinSet[i].market_cap} </td>`;
             coinData += `<td> ${coinSet[i].circulating_supply} </td>`; "<tr>"
+
+            // adding a button that takes the user to coin-description page
+            coinData += `<td><button id="learnMoreButton" onclick="location.href='./coin-description.html'">Learn More</button></td>`
         }
     
         // console.log(coinData)
     
+        // inserting the table data as a string to HTML
         document.getElementById('coinTableData').innerHTML = coinData
     });
 }
