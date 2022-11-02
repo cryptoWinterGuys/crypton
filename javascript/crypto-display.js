@@ -35,8 +35,9 @@ function insertCryptoCard(logo, name, price){
     price_para.classList.add("fs-lg", "fw-semibold", "text-primary", "mb-0");
     price_para.innerText = `$ ${price}`
 
-    const name_head = document.createElement('h3');
+    const name_head = document.createElement('a');
     name_head.classList.add("h5", "mb-2");
+    name_head.href = 'coin-description.html'
     name_head.innerText = name;
 
     const right_container = document.createElement('div');
