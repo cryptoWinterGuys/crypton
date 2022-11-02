@@ -9,12 +9,12 @@ function showTable(){
         
         for (let i = 0; i<coinSet.length; i++) {
             coinData += '<tr>'
-            coinData += `<td class="numeric"><img src="${coinSet[i].image}"></td class="numeric">`;
-            coinData += `<td class="numeric"> ${coinSet[i].name} </td>`;
-            coinData += `<td class="numeric"> ${coinSet[i].symbol} </td>`;
-            coinData += `<td class="numeric"> $ ${coinSet[i].current_price} </td>`;
-            coinData += `<td class="numeric"> ${coinSet[i].market_cap} </td>`;
-            coinData += `<td class="numeric"> ${coinSet[i].circulating_supply} </td>`; "<tr>"
+            coinData += `<td><img src="${coinSet[i].image}" class="coin" style="height: 40px; width: 40px;"></td>`;
+            coinData += `<td> ${coinSet[i].name} </td>`;
+            coinData += `<td> ${coinSet[i].symbol} </td>`;
+            coinData += `<td> $ ${coinSet[i].current_price} </td>`;
+            coinData += `<td> ${coinSet[i].market_cap} </td>`;
+            coinData += `<td> ${coinSet[i].circulating_supply} </td>`; "<tr>"
         }
     
         // console.log(coinData)
