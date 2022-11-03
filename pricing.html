@@ -2,47 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Silicon | Pricing</title>
-
-    <!-- SEO Meta Tags -->
-    <meta
-      name="description"
-      content="Silicon - Multipurpose Technology Bootstrap Template"
-    />
-    <meta
-      name="keywords"
-      content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
-    />
-    <meta name="author" content="Createx Studio" />
+    <title>Crypton | Pricing</title>
 
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon and Touch Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="assets/favicon/safari-pinned-tab.svg"
-      color="#6366f1"
-    />
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="shortcut icon" href="./assets/logo.png" />
     <meta name="msapplication-TileColor" content="#080032" />
     <meta
       name="msapplication-config"
@@ -109,11 +75,11 @@
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
       <header
-        class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky"
+        class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top"
       >
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.svg" width="47" alt="Silicon" />
+            <img src="./assets/logo.png" width="47" alt="Silicon" />
             Crypton
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
@@ -221,11 +187,15 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="..." class="nav-link">News</a>
+                  <a href="./rss-news-feed.html" class="nav-link">News</a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="..." class="nav-link">Blog</a>
+                  <a
+                    href="https://cryptowinterguys.github.io/blog/"
+                    class="nav-link"
+                    >Blog</a
+                  >
                 </li>
 
                 <li class="nav-item dropdown">
@@ -260,18 +230,16 @@
             </div>
             <div class="offcanvas-header border-top border-light">
               <a
-                href="https://themes.getbootstrap.com/product/silicon-business-technology-template-ui-kit/"
+                href="./account-signin.html"
                 class="btn btn-primary w-100"
                 target="_blank"
                 rel="noopener"
-              >
-                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
-                &nbsp;Buy now
+                >Sign-in
               </a>
             </div>
           </div>
-
-          <div class="dark-mode pe-lg-1 ms-auto me-4">
+          <!-- Light/Dark theme toggle -->
+          <div class="pe-lg-1 ms-auto me-4">
             <div
               class="form-check form-switch mode-switch"
               data-bs-toggle="mode"
@@ -296,6 +264,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- Sign-in button -->
           <a
             href="./account-signin.html"
             class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
@@ -1277,17 +1246,13 @@
     </section>
 
     <!-- Footer -->
-    <footer
-      class="footer bg-secondary pt-5 pb-4 pb-lg-5"
-      style="margin-top: -100px"
-    >
-      <div style="height: 100px"></div>
+    <footer class="footer pt-5 pb-4 pb-lg-5">
       <div class="container pt-lg-4">
         <div class="row pb-5">
           <div class="col-lg-4 col-md-6">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.svg" width="47" alt="Silicon" />
-              Silicon
+              <img src="assets/logo.png" width="47" alt="Crypton" />
+              Crypton
             </div>
             <p class="fs-sm pb-lg-3 mb-4">
               Proin ipsum pharetra, senectus eget scelerisque varius pretium
@@ -1337,27 +1302,37 @@
                 >
                   <ul class="nav flex-column pb-lg-1 mb-lg-3">
                     <li class="nav-item">
-                      <a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      <a
+                        href="./index.html"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
                         >Home</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2"
-                        >Features</a
+                      <a
+                        href="./account-details.html"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Account</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2"
-                        >Integrations</a
+                      <a
+                        href="./pricing.html"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Pricing</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2"
-                        >Prices</a
+                      <a
+                        href="./rss-news-feed.html"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >News</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      <a
+                        href="https://cryptowinterguys.github.io/blog/"
+                        class="nav-link d-inline-block px-0 pt-1 pb-2"
                         >Blog</a
                       >
                     </li>
@@ -1417,7 +1392,7 @@
               <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
                 <h6 class="mb-2">Contact Us</h6>
                 <a href="mailto:email@example.com" class="fw-medium"
-                  >email@example.com</a
+                  >cryptoWinterGuys@gmail.com</a
                 >
               </div>
             </div>
@@ -1432,7 +1407,7 @@
             href="https://createx.studio/"
             target="_blank"
             rel="noopener"
-            >Createx Studio</a
+            >CryptoWinterGuys</a
           >
         </p>
       </div>
