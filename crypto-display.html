@@ -117,7 +117,9 @@
 		<main class="page-wrapper">
 			<!-- Navbar -->
 			<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-			<header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm">
+			<header
+				class="header navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light shadow-sm navbar-sticky"
+			>
 				<div class="container px-3">
 					<a href="index.html" class="navbar-brand pe-3">
 						<img src="./assets/logo.png" width="47" alt="Silicon" />
@@ -158,6 +160,11 @@
 														>
 													</li>
 													<li>
+														<a href="./crypto-locations.html" class="dropdown-item"
+															>Pay with Crypto</a
+														>
+													</li>
+													<li>
 														<a href="./rss-news-feed.html" class="dropdown-item"
 															>Coin News</a
 														>
@@ -176,6 +183,9 @@
 										</div>
 									</div>
 								</li>
+								<li class="nav-item">
+									<a href="./account-details.html" class="nav-link">Account</a>
+								</li>
 							</ul>
 						</div>
 						<div class="offcanvas-header border-top border-light">
@@ -184,6 +194,7 @@
 							</a>
 						</div>
 					</div>
+
 					<!-- Light/Dark theme toggle -->
 					<div class="pe-lg-1 ms-auto me-4">
 						<div class="form-check form-switch mode-switch" data-bs-toggle="mode">
@@ -203,6 +214,7 @@
 					>
 						<span class="navbar-toggler-icon"></span>
 					</button>
+
 					<!-- Sign-in button -->
 					<a
 						href="./index.html"
@@ -221,13 +233,13 @@
 						<li class="breadcrumb-item">
 							<a href="./index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
 						</li>
-						<li class="breadcrumb-item active" aria-current="page">Coins</li>
+						<li class="breadcrumb-item active" aria-current="page">Top Coins</li>
 					</ol>
 				</nav>
 
 				<!-- Page title + Filters -->
 				<div class="d-lg-flex align-items-center justify-content-between py-4 mt-lg-2">
-					<h1 class="me-3">Coins</h1>
+					<h1 class="me-4">Top Coins</h1>
 					<div class="d-md-flex mb-3">
 						<div class="position-relative" style="min-width: 300px">
 							<input type="text" class="form-control pe-5" placeholder="Search Crypto" />
@@ -240,7 +252,7 @@
 
 				<!-- Courses grid -->
 				<div
-					class="row row-cols-1 row-cols-sm-2 row-cols-sm-4 gx-3 gx-sm-4 mt-n2 mt-sm-0"
+					class="row row-cols-1 row-cols-sm-2 row-cols-sm-6 gx-3 gx-sm-4 mt-n2 mt-sm-0"
 					id="coins"
 				></div>
 
@@ -282,36 +294,221 @@
 					</ul>
 				</nav>
 
-				<!-- Sign up CTA -->
-				<div class="bg-secondary rounded-3 my-2 my-md-4 my-lg-5 py-5 px-3 px-md-0">
-					<div class="row align-items-center">
-						<div
-							class="col-md-5 offset-lg-1 text-center text-md-start ps-md-5 ps-lg-0 ps-xl-5 pb-2 pb-md-0 mb-4 mb-md-0"
-						>
-							<p class="lead mb-3">Ready to get started?</p>
-							<h2 class="h1 pb-2 pb-md-4">
-								Take Your <span class="text-primary">Skills</span> to the Next Level
-							</h2>
-							<a href="#" class="btn btn-primary btn-lg">Sign up now!</a>
-						</div>
-						<div class="col-lg-6 col-md-7">
-							<div class="d-table mx-auto">
-								<img
-									src="assets/img/landing/online-courses/steps/04-dark.svg"
-									class="d-dark-mode-none"
-									width="380"
-									alt="Illustration"
-								/>
-								<img
-									src="assets/img/landing/online-courses/steps/04-light.svg"
-									class="d-none d-dark-mode-block"
-									width="380"
-									alt="Illustration"
-								/>
+				<!-- News categories -->
+				<section class="container mb-lg-4 pb-5">
+					<!-- Category -->
+					<article class="mb-5 pt-5 border-top">
+						<h1 class="text-center">Crypto in the News!</h1>
+						<!-- Category header -->
+						<header class="d-flex align-items-center justify-content-between mb-4">
+							<span class="badge bg-danger shadow-danger fs-base fw-normal">Ethereum</span>
+							<a href="#" class="btn btn-outline-primary ms-4">
+								See more
+								<i class="bx bx-right-arrow-alt ms-1 me-n1 fs-lg"></i>
+							</a>
+						</header>
+
+						<!-- Ethereum feed -->
+						<iframe
+							class="widget_preview_iframe"
+							frameborder="0"
+							allow="autoplay; encrypted-media"
+							allowfullscreen=""
+							scrolling="no"
+							style="visibility: visible; width: 100%; height: 723px"
+							src="https://www.feedspot.com/widgets/lookup/fab5bc2cq6WJ"
+						></iframe>
+					</article>
+
+					<!-- Category -->
+					<article class="mb-5 pt-5 border-top">
+						<!-- Category header -->
+						<header class="d-flex align-items-center justify-content-between mb-4">
+							<span class="badge bg-warning shadow-warning fs-base fw-normal">Altcoins</span>
+							<a href="#" class="btn btn-outline-primary ms-4">
+								See more
+								<i class="bx bx-right-arrow-alt ms-1 me-n1 fs-lg"></i>
+							</a>
+						</header>
+
+						<!-- Category feed -->
+						<iframe
+							class="widget_preview_iframe"
+							frameborder="0"
+							allow="autoplay; encrypted-media"
+							allowfullscreen=""
+							scrolling="no"
+							style="visibility: visible; width: 100%; height: 473px"
+							src="https://www.feedspot.com/widgets/lookup/d075qe1Wb196"
+						></iframe>
+					</article>
+
+					<!-- Category -->
+					<article class="mb-5 pt-5 border-top">
+						<!-- Category header -->
+						<header class="d-flex align-items-center justify-content-between mb-4">
+							<span class="badge bg-success shadow-success fs-base fw-normal">Blockchain News</span>
+							<a href="#" class="btn btn-outline-primary ms-4">
+								See more
+								<i class="bx bx-right-arrow-alt ms-1 me-n1 fs-lg"></i>
+							</a>
+						</header>
+
+						<!-- Category feed -->
+						<!-- RSS feed Blockchain -->
+
+						<iframe
+							class="widget_preview_iframe"
+							frameborder="0"
+							allow="autoplay; encrypted-media"
+							allowfullscreen=""
+							scrolling="no"
+							style="visibility: visible; width: 100%; height: 473px"
+							src="https://www.feedspot.com/widgets/lookup/e162165aqGDT"
+						></iframe>
+					</article>
+
+					<!-- Category -->
+					<article class="mb-5 pt-5 border-top">
+						<!-- Category header -->
+						<header class="d-flex align-items-center justify-content-between mb-4">
+							<span class="badge bg-danger shadow-success fs-base fw-normal"
+								>More News Categories</span
+							>
+							<a href="#" class="btn btn-outline-primary ms-4">
+								See more
+								<i class="bx bx-right-arrow-alt ms-1 me-n1 fs-lg"></i>
+							</a>
+						</header>
+					</article>
+				</section>
+
+				<!-- Subscription CTA -->
+				<section class="py-5 bg-secondary mt-n4 mt-md-0">
+					<div class="container py-md-3 py-lg-5">
+						<div class="row justify-content-center">
+							<div class="col-xl-8 col-lg-9 col-md-11">
+								<h2
+									class="h1 d-md-inline-block position-relative mb-md-5 mb-sm-4 text-sm-start text-center"
+								>
+									Don't Want to Miss Anything?
+
+									<!-- Arrow shape -->
+									<svg
+										class="d-md-block d-none position-absolute top-0 ms-4 ps-1"
+										style="left: 100%"
+										xmlns="http://www.w3.org/2000/svg"
+										width="65"
+										height="68"
+										fill="#6366f1"
+									>
+										<path
+											d="M53.9527 51.0012c8.396-10.5668 2.0302-26.0134-11.7481-26.7511-.6899-.0646-1.4612.0015-2.1258.0431.1243 9.0462-4.1714 18.8896-11.5618 21.3814-6.6695 2.2133-10.3337-4.2224-7.5813-9.676 3.2966-6.4755 9.103-11.8504 16.1678-13.8189-.5654-5.6953-3.3436-10.7672-9.485-12.48517C17.2678 6.8204 6.49364 16.3681 4.98841 26.127c-.09276 1.0297-1.68569.9497-1.59293-.0801C3.98732 12.9139 19.7395 2.55212 31.9628 8.5787c4.7253 2.3813 7.2649 7.3963 7.9368 13.067 7.4237-.9311 14.5154 3.3683 18.3422 9.5422 4.3988 7.1623 2.3584 15.1401-2.6322 21.1108-.7826.9653-2.3331-.3572-1.6569-1.2975zM26.7754 32.1845c-1.9411 2.2411-4.076 5.0872-4.3542 8.1764-.3036 2.9829 3.7601 3.0525 5.4905 2.7645 2.1568-.3863 3.7221-2.3164 4.8863-4.0419 2.6228-3.6308 4.3657-9.0752 4.4844-14.2563-4.0808 1.279-7.6514 4.2327-10.507 7.3573zm24.6311 25.592c-.7061-2.9738-1.2243-6.1031-1.1591-9.143.0423-1.242 1.767-1.0805 1.8313.1372.1284 2.435.815 4.8532 1.4764 7.1651l4.1619-1.4098c1.0153-.4586 2.4373-1.5714 3.6544-1.1804.6087.1954.7347.7264.6475 1.3068-.2302 1.3976-2.4683 1.9147-3.5901 2.398-1.8429.7619-3.6293 1.2865-5.5477 1.7298-.6391.1476-1.3233-.3665-1.4746-1.0037z"
+										/>
+									</svg>
+								</h2>
+
+								<!-- Title + checkboxes -->
+								<div class="row gy-4 align-items-center mb-lg-5 mb-4 pb-3">
+									<div class="col-md-3">
+										<h3 class="h5 mb-0 text-sm-start text-center">Sign up for Newsletters</h3>
+									</div>
+									<div class="col-md-9">
+										<div class="row row-cols-sm-3 row-cols-2 gy-2">
+											<div class="col">
+												<div class="form-check mb-0">
+													<input
+														type="checkbox"
+														id="s-daily-newsletter"
+														class="form-check-input"
+													/>
+													<label for="s-daily-newsletter" class="form-check-label"
+														>Daily Newsletter</label
+													>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check mb-0">
+													<input
+														type="checkbox"
+														id="s-advertising-updates"
+														class="form-check-input"
+														checked
+													/>
+													<label for="s-advertising-updates" class="form-check-label"
+														>Fast Movers</label
+													>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check mb-0">
+													<input
+														type="checkbox"
+														id="s-week-in-review"
+														class="form-check-input"
+													/>
+													<label for="s-week-in-review" class="form-check-label"
+														>Crypto Updates</label
+													>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check mb-0">
+													<input
+														type="checkbox"
+														id="s-event-updates"
+														class="form-check-input"
+													/>
+													<label for="s-event-updates" class="form-check-label">Events</label>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check mb-0">
+													<input
+														type="checkbox"
+														id="s-startups-weekly"
+														class="form-check-input"
+													/>
+													<label for="s-startups-weekly" class="form-check-label"
+														>Weekly Recap</label
+													>
+												</div>
+											</div>
+											<div class="col">
+												<div class="form-check mb-0">
+													<input id="s-podcasts" type="checkbox" class="form-check-input" />
+													<label for="s-podcasts" class="form-check-label">Podcasts</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Email field -->
+								<form class="d-flex flex-sm-row flex-column mb-3 needs-validation" novalidate>
+									<div class="input-group me-sm-3 mb-sm-0 mb-3">
+										<i
+											class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y ms-3 zindex-5 fs-5 text-muted"
+										></i>
+										<input
+											type="email"
+											class="form-control form-control-lg rounded-3 ps-5"
+											placeholder="Your email"
+											required
+										/>
+										<div class="invalid-tooltip position-absolute start-0 top-0 mt-n4">
+											Please provide a valid email address!
+										</div>
+									</div>
+									<button class="btn btn-lg btn-primary">Subscribe *</button>
+								</form>
+								<div class="form-text fs-sm text-sm-start text-center">
+									* Yes, I agree to the <a href="#">terms</a> and <a href="#">privacy policy</a>.
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</section>
 		</main>
 
