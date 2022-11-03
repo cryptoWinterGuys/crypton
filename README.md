@@ -1,3 +1,3 @@
 # crypton
 
-More info to follow soon
+https://cryptowinterguys.github.io/crypton
