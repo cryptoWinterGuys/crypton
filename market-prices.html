@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Crypton | Contacts</title>
+		<title>Crypton | Current Pricing</title>
 
 		<!-- Viewport -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,12 +15,15 @@
 
 		<!-- Vendor Styles -->
 		<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+		<link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
 
 		<!-- Main Theme Styles + Bootstrap -->
 		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
 		<!-- Page loading styles -->
 		<link rel="stylesheet" href="./css/loading.css" />
+
+		<link rel="stylesheet" href="./css/market-prices.css" />
 
 		<!-- Theme mode -->
 		<script>
@@ -62,80 +65,163 @@
 		<main class="page-wrapper">
 			<!-- Navbar -->
 			<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-			<header class="header navbar navbar-expand-lg">
+			<header
+				class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top"
+			>
 				<div class="container px-3">
 					<a href="index.html" class="navbar-brand pe-3">
-						<img src="./assets/logo.png" width="47" alt="Crypton Logo" />Crypton
+						<img src="./assets/logo.png" width="47" alt="Silicon" />
+						Crypton
+					</a>
+					<div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+						<div class="offcanvas-header border-bottom border-light">
+							<h5 class="offcanvas-title text-white">Menu</h5>
+							<button
+								type="button"
+								class="btn-close btn-close-white"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item dropdown">
+									<a
+										href="#"
+										class="nav-link dropdown-toggle active"
+										data-bs-toggle="dropdown"
+										aria-current="page"
+										>Tools</a
+									>
+									<div class="dropdown-menu dropdown-menu-dark p-0">
+										<div class="d-lg-flex">
+											<div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+												<ul class="list-unstyled mb-0">
+													<li>
+														<a href="./market-prices.html" class="dropdown-item"
+															>Cryptocurrencies</a
+														>
+													</li>
+													<li>
+														<a href="./crypto-display.html" class="dropdown-item"
+															>Coin info</a
+														>
+													</li>
+													<li>
+														<a href="./rss-news-feed.html" class="dropdown-item"
+															>Coin News</a
+														>
+													</li>
+													<li>
+														<a
+															href="https://cryptowinterguys.github.io/blog/"
+															class="dropdown-item d-flex align-items-center"
+															target="_blank"
+															rel="noopener"
+															>Blog</a
+														>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="./account-details.html" class="nav-link">Account</a>
+								</li>
+							</ul>
+						</div>
+						<div class="offcanvas-header border-top border-light">
+							<a href="./index.html" class="btn btn-primary w-100" target="_blank" rel="noopener"
+								>Sign-out
+							</a>
+						</div>
+					</div>
+
+					<!-- Light/Dark theme toggle -->
+					<div class="pe-lg-1 ms-auto me-4">
+						<div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+							<input type="checkbox" class="form-check-input" id="theme-mode" />
+							<label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+							<label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+						</div>
+					</div>
+					<button
+						type="button"
+						class="navbar-toggler"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- Sign-in button -->
+					<a
+						href="./index.html"
+						class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+						rel="noopener"
+						>Sign-out
 					</a>
 				</div>
 			</header>
 
-			<!-- Page content -->
-			<section
-				class="bg-size-cover bg-position-bottom-center bg-repeat-0 py-5"
-				style="background-image: url(assets/img/contacts/bg.svg)"
-			>
-				<div class="container pt-5 pb-lg-4 pb-xl-5">
+			<!-- Hero -->
+			<section class="py-4">
+				<div class="container pb-2 py-lg-3">
 					<!-- Breadcrumb -->
-					<nav class="pt-lg-4" aria-label="breadcrumb">
-						<ol class="breadcrumb mb-0">
+					<nav class="pb-4 mb-lg-3" aria-label="breadcrumb">
+						<ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
 							<li class="breadcrumb-item">
 								<a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
 							</li>
-							<li class="breadcrumb-item active" aria-current="page">Contacts</li>
+							<li class="breadcrumb-item active" aria-current="page">Current Price</li>
 						</ol>
 					</nav>
+					<h1 class="text-center mb-0">Crypto Current Price</h1>
+				</div>
+				<div></div>
+			</section>
 
-					<div class="row pt-md-2 pt-lg-5 pb-2 pb-md-4">
-						<div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
-							<h1 class="h3 mb-2">Got a question?</h1>
-							<h1 class="h3 mb-2">Want to work with us?</h1>
-							<h2 class="display-1 text-gradient-primary pb-sm-2 pb-md-3 mb-3">Let's talk!</h2>
-							<div class="nav d-block lead pt-lg-5">
-								<a href="#" class="nav-link fw-normal text-decoration-underline p-0 mb-4"
-									>hello@crypton.com</a
-								>
-								<div class="text-nav">+1-406-555-0120</div>
-							</div>
-						</div>
-						<div class="col-lg-6 offset-xl-1 offset-xxl-2 pt-3 pt-md-4 pt-lg-3 mt-3">
-							<form class="needs-validation" novalidate>
-								<div class="row g-4">
-									<div class="col-sm-6">
-										<label for="fn" class="form-label fs-base">Full name</label>
-										<input type="text" class="form-control form-control-lg" id="fn" required />
-										<div class="invalid-feedback">Please enter your full name!</div>
-									</div>
-									<div class="col-sm-6">
-										<label for="email" class="form-label fs-base">Email</label>
-										<input
-											type="email"
-											class="form-control form-control-lg"
-											id="email"
-											required
-										/>
-										<div class="invalid-feedback">Please provide a valid email address!</div>
-									</div>
-									<div class="col-12 pb-2">
-										<label for="message" class="form-label fs-base">Message</label>
-										<textarea
-											class="form-control form-control-lg"
-											id="message"
-											rows="3"
-											required
-										></textarea>
-										<div class="invalid-feedback">Please provide a valid email address!</div>
-									</div>
-									<div class="col-12">
-										<a href="./index.html" class="btn btn-primary">Send</a>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
+			<section class="container px-3">
+				<!-- placeholder for the pricing table -->
+				<div class="table-responsive-md">
+					<table class="table table-striped-columns">
+						<thead>
+							<tr>
+								<th scope="col" class="numeric">Icon</th>
+								<th scope="col" class="numeric">Name</th>
+								<th scope="col" class="numeric">Symbol</th>
+								<th scope="col" class="numeric">Price</th>
+								<th scope="col" class="numeric">Market Cap</th>
+								<th scope="col" class="numeric">Circulating Supply</th>
+								<th scope="col" class="numeric">Link</th>
+							</tr>
+						</thead>
+						<tbody id="coinTableData">
+							<!-- Using API to dynamically render data here -->
+						</tbody>
+					</table>
 				</div>
 			</section>
 		</main>
+
+		<!-- Back to top button -->
+		<a href="#top" class="btn-scroll-top" data-scroll>
+			<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+			<i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+		</a>
+
+		<!-- Vendor Scripts -->
+		<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+		<!-- Main Theme Script -->
+		<script src="assets/js/theme.min.js"></script>
+		<script src="./javascript/market-prices.js"></script>
 
 		<!-- Footer -->
 		<footer class="footer pt-5 pb-4 pb-lg-5 mt-lg-5 border-top border-light">
@@ -256,18 +342,5 @@
 				</p>
 			</div>
 		</footer>
-
-		<!-- Back to top button -->
-		<a href="#top" class="btn-scroll-top" data-scroll>
-			<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-			<i class="btn-scroll-top-icon bx bx-chevron-up"></i>
-		</a>
-
-		<!-- Vendor Scripts -->
-		<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-		<!-- Main Theme Script -->
-		<script src="assets/js/theme.min.js"></script>
 	</body>
 </html>
