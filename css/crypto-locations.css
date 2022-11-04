@@ -1,3 +1,7 @@
 #map {
-  height: 180px;
+  height: 700px;
+}
+#map_text {
+  padding-top: 120px;
+  padding-bottom: 0;
 }
